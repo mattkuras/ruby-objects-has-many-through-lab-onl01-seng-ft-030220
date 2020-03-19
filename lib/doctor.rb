@@ -27,10 +27,10 @@ class Doctor
   end
   
   def patients 
-    Appointment.all.select do |app|
+    Appointment.all.map do |app|
       if app.doctor == self
         app.patient
-      binding.pry 
+     # binding.pry 
       end
     end
   end
